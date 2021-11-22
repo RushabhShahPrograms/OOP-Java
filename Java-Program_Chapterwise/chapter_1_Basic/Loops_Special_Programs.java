@@ -8,18 +8,18 @@ class Loops_Special_Programs
       Scanner s = new Scanner(System.in);
       System.out.println("Enter the number to find the krishnamurthy number: ");
       int num = s.nextInt();
-      int temp,sum=0,fact;
+      int temp,sum=0,fact=1;
       temp=num;
-      while(temp>0)
+      while(temp!=0)
       {
           int digit = temp%10;
           fact=1;
-          for(int i=digit;i>=1;i--)
+          for(int i=0;i<=digit;i++)
           {
               fact = fact * i;
           }
           sum = sum + fact;
-          digit = digit / 10;
+          temp = temp / 10;
       }
       if(sum == num)
       {
